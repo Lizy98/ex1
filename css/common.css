@@ -1,1 +1,328 @@
+/* 头尾各个页面相同的样式 */
+/* 版心 */
+.wrapper {
+  margin: 0 auto;
+  width: 1240px;
+}
+
+/* 快捷导航 shortcut */
+.shortcut {
+  height: 52px;
+  background-color: #333;
+}
+.shortcut .wrapper {
+  display: flex;
+  justify-content: flex-end;
+  height: 52px;
+}
+.shortcut ul{
+  height: 52px;
+  display: flex;
+}
+.shortcut li{
+  margin-top: 20px;
+  height: 14px;
+  padding: 0 15px;
+  border-right: 0.5px solid #999;
+}
+.shortcut li:last-child{
+  border: none;
+}
+.shortcut li a{
+  display: block;
+  color: #fff;
+  height: 14px;
+  line-height: 14px;
+  font-size: 14px;
+}
+.shortcut li a:hover{
+  color: #5EB69C;
+}
+.shortcut li span{
+  vertical-align: middle;
+}
+
+/* 在快捷导航的CSS中添加 */
+.shortcut .mobile-link {
+  position: relative;
+  padding-left: 22px; /* 为图标留出空间 */
+}
+
+.shortcut .mobile-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url(../uploads/手机.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+/* 头部区域 header */
+.header{
+  display: flex;
+  height: 88px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+/* logo区域 */
+.header .logo{
+  width: 200px;
+  margin-right: 40px;
+  background-image: url(../images/logo.png);
+}
+.header h1 a{
+  display: block;
+  width: 200px;
+  height: 88px;
+  font-size: 0;
+}
+/* 导航区域 */
+.nav{
+  margin-top: 33px;
+  margin-right: 28px;
+}
+.nav ul{
+  display: flex;
+  /* justify-content: space-between; */
+}
+.nav li{
+  margin-right: 48px;
+}
+.nav a{
+  display: block;
+  padding-bottom: 8px;
+}
+.nav a:hover{
+  border-bottom: 2px solid #5EB69C;
+  color: #5EB69C;
+}
+/* 搜索区域样式 */
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 33px;
+  margin-right: 27px;
+  width: 170px;
+  height: 34px;
+  border-bottom: 2px solid #F4F4F4;
+  padding-bottom: 4px;
+}
+
+/* 搜索图标样式 */
+.search-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../uploads/搜索.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  flex-shrink: 0; /* 防止图标被压缩 */
+}
+
+.search input {
+  width: 0;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 5px 0; /* 增加上下内边距 */
+}
+
+.search input::placeholder {
+  color: #ccc;
+  height: 22px;
+  font-size: 16px;
+}
+
+/* 购物车 cart */
+.car{
+  position: relative;
+  float:left;
+  margin-top:28px;
+  margin-left:15px;
+  width: 24px;
+  height:24px;
+  /* background-color: skyblue; */
+  background-image:url(../uploads/购物\ 车1.png);
+  /* background-position: -119px -69px; */
+}
+/* .cart .iconfont{
+  font-size: 35px;
+} */
+.car i{
+  position: absolute;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fff;
+  top: -8px; /* 移到图片上方 */
+  right: -18px; /* 移到图片右侧 */
+  padding: 0 7px;
+  background-color: #E26237;
+  border-radius: 8px;
+}
+
+/* 侧导航 */
+.subnav{
+  width: 250px;
+  background-color: rgba(0, 0, 0,0.6);
+}
+.subnav li{
+  display: flex;
+  height: 50px;
+  padding: 14px 12px 14px 29px;
+  position: relative;
+}
+.subnav a,
+.subnav .iconfont{
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+}
+.subnav a{
+  margin-right: 5px;
+}
+.subnav h4{
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 14px;
+}
+
+/* 将字体图标替换为图片箭头 */
+.subnav .iconfont{
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  /* 隐藏字体图标文字 */
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url(../uploads/right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* 底部 service */
+.footer{
+  height: 610px;
+  background-color: #f5f5f5;
+
+}
+/* 服务 */
+.service{
+  height: 179px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.service ul{
+  display: flex;
+  height: 179px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.service li{
+  height: 58px;
+  background: url(../images/sprite.png) no-repeat;
+  padding-left: 78px;
+}
+.service li:nth-child(2){
+  background-position: 0 -58px;
+}
+.service li:nth-child(3){
+  background-position: 0 -116px;
+}
+.service li:nth-child(4){
+  background-position: 0 -174px;
+}
+.service h5{
+  line-height: 58px;
+  font-size: 28px;
+}
+/* 查看全部链接样式 */
+.all {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  color: #A1A1A1;
+  text-decoration: none;
+  padding-right: 20px; /* 为箭头留出空间 */
+}
+
+.all::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../uploads/right.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-left: 8px;
+}
+
+
+/* 帮助中心 */
+.help{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 58px;
+  height: 302px;
+}
+.help dt{
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.help dd a{
+  line-height: 32px;
+  color: #969696;
+}
+.help dd .iconfont{
+  color: #5EB69C;
+}
+.help .right ul{
+  display: flex;
+  justify-content: space-between;
+  width: 295px;
+}
+.help .right img{
+  width: 120px;
+  height: 120px;
+  margin-bottom: 8px;
+}
+.help .right p{
+  text-align: center;
+  color: #969696;
+}
+/* 客服图标样式 */
+.service-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+/* 版权 */
+.copyright{
+  text-align: center;
+}
+.copyright p,
+.copyright p a{
+  color: #A1A1A1;
+}
+.copyright p{
+  margin-bottom: 10px;
+}
+.student-info {
+  text-align: center;
+  color: #666;
+  font-size: 18px;  /* 放大字体 */
+  margin-top: 10px;
+  font-weight: bold;  /* 加粗 */
+}
 
